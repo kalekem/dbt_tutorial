@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: students
+    schema: dbt_dataset
+    tables: 
+      - name: students_raw
+        columns: 
+          - name: id
+            tests: 
+              - not_null
+              - unique
+models:
+  - name: students_prepared
+    config: 
+      materialized: ephemeral
+  - name: students_base
+    columns:
+      - name: student_id
+        tests: 
+          - not_null
+          - unique
+    config:
+      materialized: incremental
+      alias: students_updated
