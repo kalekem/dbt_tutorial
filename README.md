@@ -1,6 +1,6 @@
 # dbt_tutorial
 
-This is the code source repo used in this dbt tutorial video(s): 
+This is the code source repo used in this dbt tutorial video(s): https://youtu.be/3aJz9_0AH_0?si=aANwfWVihecNmCpk
 
 Steps:
  - Clone this repo `git clone https://github.com/kalekem/dbt_tutorial.git `
