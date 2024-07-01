@@ -18,7 +18,7 @@ from
 {% if is_incremental %}
 
 where 1=1
-    -- and dbt_valid_to is null --only bring in new or changed/updated records
-    and event_time >= (select coalesce(max(event_time),TIMESTAMP('1900-01-01')) from {{ this }} )
+    and dbt_valid_to is null --only bring in new or changed/updated records
+    -- and event_time >= (select coalesce(max(event_time),TIMESTAMP('1900-01-01')) from {{ this }} )
 
 {% endif %}
