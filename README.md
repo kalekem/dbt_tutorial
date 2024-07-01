@@ -14,7 +14,7 @@ Steps:
  - `dbt run --select <model_name> i.e dbt run --select students_base`
 
  Command To Refresh incremental Model:
- - `dbt run --select <model_name> --full-refresh i.e dbt run --select students_base --full-refresh
+ - `dbt run --select <model_name> --full-refresh i.e dbt run --select students_base --full-refresh`
 
 Note: You should have dbt core installed and setup to connect to BigQuery to follow the above steps successfully
 
