@@ -1,11 +1,6 @@
-Welcome to your new dbt project!
+# dbt_tutorial
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
+This is the code source repo used in this dbt tutorial video(s): https://youtu.be/KOd_KTgou4A?si=rn1l968rzFamDPRn
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
