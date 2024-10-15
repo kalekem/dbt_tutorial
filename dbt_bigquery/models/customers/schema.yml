@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bigquery_source
+    schema: staging
+    description: bigquery source data
+
+    tables:
+      - name: customers_update
+        description: stores raw customer data
+    
+
