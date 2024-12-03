@@ -1,0 +1,5 @@
+dbt-core
+dbt-bigquery
+boto3
+faker
+pandas
