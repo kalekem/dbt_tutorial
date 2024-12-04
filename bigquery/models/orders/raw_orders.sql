@@ -13,7 +13,7 @@ WITH prepared AS (
         customer_name,
         order_amount,
         order_status,
-        ROUND(order_amount * 0.1, 2) AS tax_amount, -- Adding a tax column
+        ROUND(order_amount * 0.1, 2) AS tax_amount, -- 10% of order_amount
         CASE
             WHEN order_status = "Shipped" THEN "Completed"
             ELSE "Pending"
