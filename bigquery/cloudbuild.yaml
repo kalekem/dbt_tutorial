@@ -1,0 +1,25 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/dbt-cloud-run", "."]
+
+  # Step 2: Push the image to Google Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/dbt-cloud-run"]
+
+  # Step 3: Deploy the container image to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "gcloud"
+    args: 
+      - "run"
+      - "jobs"
+      - "deploy"
+      - "dbt-cloud-run"
+      - "--image=gcr.io/$PROJECT_ID/dbt-cloud-run"
+      - "--region=us-central1"
+      - "--memory=2Gi"
+      - "--max-retries=4"
+
+# Define the images used in the build process
+images:
+  - "gcr.io/$PROJECT_ID/dbt-cloud-run"

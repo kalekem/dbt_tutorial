@@ -1,7 +1,7 @@
 bigquery:
   outputs:
     dev:
-      dataset: staging
+      dataset: ck_data_tech
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: US

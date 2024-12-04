@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: orders_tbl
+    schema: staging
+    tables: 
+      - name: raw_orders
+        columns: 
+          - name: order_id
+            tests: 
+              - not_null
+              - unique
