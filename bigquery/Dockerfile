@@ -7,17 +7,15 @@ WORKDIR /app
 # Copy project files
 COPY . .
 
-#upgrade pip
-RUN pip install --upgrade pip --root-user-action=ignore
-
-#install packages
+# Install dbt and dependencies
+RUN pip install --upgrade pip --root-user-action=ignore 
 RUN pip install -r requirements.txt --root-user-action=ignore
 
-#install dependencies
+# Install dbt dependencies
 RUN dbt deps 
 
 # Set environment variables for dbt
 ENV DBT_PROFILES_DIR=/app
 
-# Specify the entrypoint script
-ENTRYPOINT ["dbt"]
+# Specify the entrypoint script. These are the commands that cloud run job will execute on default
+ENTRYPOINT ["dbt", "run", "--select", "orders"]
