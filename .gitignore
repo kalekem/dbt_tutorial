@@ -4,4 +4,5 @@ bigquery/.user.yml
 snowflake/target/
 snowflake/logs
 snowflake/.DS_Store
+.DS_Store
 
