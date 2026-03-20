@@ -4,3 +4,4 @@ dbt-bigquery
 boto3
 faker
 pandas
+pyodbc
