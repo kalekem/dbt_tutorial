@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: fct_customer_summary
+    columns:
+      - name: account_number
+        tests:
+          - not_null
+          - unique
+      - name: total_spend
+        tests:
+          - not_null
+      - name: order_count
+        tests:
+          - not_null
+
+    config:
+      materialized: table
+      alias: customer_summary
+
+  - name: stg_customer
+    config: 
+        materialized: ephemeral
+
+  - name: stg_person
+    config: 
+        materialized: ephemeral
+
+  - name: stg_sales_order_header
+    config: 
+        materialized: ephemeral

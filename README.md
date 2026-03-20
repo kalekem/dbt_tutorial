@@ -1,6 +1,8 @@
 This repo contains code used in these video tutorials:
 - https://youtu.be/KOd_KTgou4A?si=rn1l968rzFamDPRn
 - https://youtu.be/3aJz9_0AH_0?si=aANwfWVihecNmCpk
+- https://youtu.be/syj93Cn28JA?si=7d9xJjemfHxhV80H
+
 
 
 ### Resources:

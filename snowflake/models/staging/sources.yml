@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    database: staging
+    schema: public
+    tables:
+      - name: SalesOrderHeader
+      - name: Customer
+      - name: Person
